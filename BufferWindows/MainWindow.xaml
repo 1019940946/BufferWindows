@@ -6,7 +6,7 @@
         xmlns:halcon="clr-namespace:HalconDotNet;assembly=halcondotnet"
         xmlns:local="clr-namespace:BufferWindows"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="350" Width="525" ContentRendered="Window_ContentRendered">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="5*"/>
@@ -19,9 +19,9 @@
         </Grid.ColumnDefinitions>
         <halcon:HWindowControlWPF Grid.Row="0" Grid.Column="0" Name="hWindow1"/>
         <halcon:HWindowControlWPF Grid.Row="0" Grid.Column="1" Name="hWindow2"/>
-        <halcon:HWindowControlWPF Name="hWindowbuff" Visibility="Collapsed"/>
-        <TextBlock Grid.Row="1" Grid.Column="0"/>
-        <TextBlock Grid.Row="1" Grid.Column="1"/>
-        <Button Grid.Row="2" Grid.ColumnSpan="2" Content="开始测试" Click="Button_Click"/>
+        <TextBlock Grid.Row="1" Grid.Column="0" Name="Log1"/>
+        <TextBlock Grid.Row="1" Grid.Column="1" Name="Log2"/>
+        <Button Grid.Row="2" Grid.Column="0" Content="开始测试" Click="Button_Click"/>
+        <Button Grid.Row="2" Grid.Column="1" Content="开始测试(buffer)" Click="Button_Click_1"/>
     </Grid>
 </Window>
