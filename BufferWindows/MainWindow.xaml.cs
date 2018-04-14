@@ -29,6 +29,7 @@ namespace BufferWindows
             
         }
 
+        //测试普通状况下的绘图时间
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             new Thread(new ThreadStart(() =>
@@ -106,6 +107,7 @@ namespace BufferWindows
             }))
             { IsBackground = true }.Start();
         }
+
 
         private void Window_ContentRendered(object sender, EventArgs e)
         {
